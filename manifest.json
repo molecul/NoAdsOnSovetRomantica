@@ -1,0 +1,31 @@
+{
+
+  "manifest_version": 2,
+  "name": "NoAdsOnSovetRomantica",
+  "version": "1.0.2",
+ 
+  "description": "Cайт sovetromantica.com без рекламы",
+  "icons": {
+    "32": "icons/icon32.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "noAds@sovetromantica.com",
+      "strict_min_version": "45.0"
+    }
+  },  
+
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.sovetromantica.com/*"],
+      "js": ["removeAdv.js"]
+    }
+  ]
+
+}
